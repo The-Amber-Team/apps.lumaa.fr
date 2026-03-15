@@ -145,6 +145,10 @@ iframe {
 	font-family: var(--apple-sf-light);
 }
 
+.no-pc {
+	display: none;
+}
+
 /* DARK MODE */
 
 @media (prefers-color-scheme: dark) {
@@ -167,5 +171,15 @@ iframe {
 
 	body:not(body.colored) .footer {
 		color: hsla(0, 0%, 100%, 0.5);
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.no-mobile {
+		display: none;
+	}
+
+	.no-pc {
+		display: inherit;
 	}
 }

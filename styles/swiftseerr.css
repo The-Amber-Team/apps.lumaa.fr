@@ -1,0 +1,94 @@
+:root {
+    --seerr-purple: rgb(99, 102, 241);
+
+    --apple-purple-l: rgb(203, 48, 224);
+    --apple-purple-d: rgb(219, 52, 242);
+}
+
+a {
+    color: var(--seerr-purple);
+}
+
+.app {
+    margin: 1em 0;
+}
+
+.appicon, .present img {
+    width: 150px;
+    height: 150px;
+}
+
+.card-container {
+    height: unset;
+    padding: 1.5em;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card-container .card {
+    width: 70vw;
+}
+
+.card .content {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 25px;
+}
+
+.card .content .text {
+    margin: 1em 0;
+}
+
+.card .content img {
+    height: 20em;
+    border-radius: 20px;
+}
+
+button  {
+	color: var(--seerr-purple);
+    background: none;
+    outline: none;
+    border: none;
+    font-size: inherit;
+}
+
+button.br {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    font-size: 21px;
+}
+
+button.br .icon {
+    width: 1em;
+    height: 1em;
+    background-color: var(--seerr-purple);
+    -webkit-mask: no-repeat center / contain;
+    mask: no-repeat center / contain;
+}
+
+button.br .icon.magnifyingglass {
+    -webkit-mask-image: url("../assets/sf/text.magnifyingglass.svg");
+    mask-image: url("../assets/sf/text.magnifyingglass.svg");
+}
+
+@media (prefers-color-scheme: dark) {
+    a {
+        color: var(--seerr-purple);
+    }
+
+    button {
+        color: var(--seerr-purple);
+    }
+
+    button.br .icon {
+        background-color: var(--seerr-purple);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .card-container .card {
+        width: 90vw;
+    }
+}
