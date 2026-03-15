@@ -23,6 +23,16 @@ a {
     height: 150px;
 }
 
+.h-carousel {
+    margin: 35px 0;
+}
+
+.h-carousel img {
+    width: unset;
+    height: 300px;
+    object-fit: fill;
+}
+
 .card-container {
     height: unset;
     padding: 1.5em;

@@ -97,6 +97,70 @@ iframe {
 	margin: 3em;
 }
 
+.h-carousel {
+    overflow: scroll hidden;
+    width: 100vw;
+}
+
+.v-carousel {
+    overflow: hidden scroll;
+    height: 100vw;
+}
+
+.h-carousel, .v-carousel {
+    display: flex;
+    padding: 0 10px;
+}
+
+.h-carousel.auto, .v-carousel.auto {
+    overflow: hidden !important;
+}
+
+.h-carousel img, .v-carousel img {
+    width: 15vw;
+}
+
+.h-carousel.auto {
+    --carousel-duration: 24s;
+    --carousel-gap: 10px;
+    --carousel-cycle-width: 0px;
+    --carousel-play-state: running;
+    --carousel-easing: linear;
+    padding: 0 10px;
+    cursor: default;
+}
+
+.h-carousel.auto:not(.is-enhanced) {
+    overflow-x: auto !important;
+}
+
+.h-carousel.auto .carousel-track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    will-change: transform;
+    animation-duration: var(--carousel-duration);
+    animation-timing-function: var(--carousel-easing);
+    animation-iteration-count: infinite;
+    animation-play-state: var(--carousel-play-state);
+}
+
+.h-carousel.auto.is-direction-left .carousel-track {
+    animation-name: marquee-left;
+}
+
+.h-carousel.auto.is-direction-right .carousel-track {
+    animation-name: marquee-right;
+}
+
+.h-carousel.auto .carousel-group {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: var(--carousel-gap);
+    padding-inline-end: var(--carousel-gap);
+}
+
 .card-container {
 	width: 100vw;
 	display: flex;
@@ -147,6 +211,24 @@ iframe {
 
 .no-pc {
 	display: none;
+}
+
+@keyframes marquee-left {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(calc(-1 * var(--carousel-cycle-width)), 0, 0);
+    }
+}
+
+@keyframes marquee-right {
+    from {
+        transform: translate3d(calc(-1 * var(--carousel-cycle-width)), 0, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
 }
 
 /* DARK MODE */
