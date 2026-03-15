@@ -1,8 +1,13 @@
 :root {
+    --seerr-bg-purple: rgb(17, 24, 39);
     --seerr-purple: rgb(99, 102, 241);
 
     --apple-purple-l: rgb(203, 48, 224);
     --apple-purple-d: rgb(219, 52, 242);
+}
+
+body {
+    background: var(--seerr-bg-purple);
 }
 
 a {

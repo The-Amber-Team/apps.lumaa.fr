@@ -20,9 +20,9 @@
 }
 
 .text {
-	padding: 3em 15em;
+	padding: 3em 15vw;
 	text-align: justify;
-	font-size: 1.1vw;
+	font-size: 1.3vw;
 }
 
 .text h1 {
@@ -118,11 +118,17 @@ hr {
 	}
 
 	.apps {
+		display: flex;
+		flex-direction: column;
 		text-align: center;
 	}
 
 	.apps > * {
-		margin: 1em;
+		margin: 0.2em;
+	}
+
+	.apps > *:not(:last-child) {
+		margin: 0.2em;
 	}
 
 	.title p::first-line {
